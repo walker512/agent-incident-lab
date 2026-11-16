@@ -1,0 +1,17 @@
+[
+  {
+    "name": "codex-test-failure",
+    "raw_sha256": "6f6af39c4fba05ad06580ca6e8b3b83830c334a4272bd9271af5191d92641b82",
+    "projected_sha256": "ae9febee73acdf4c4ce8eb9693494523d0bb4ba67a0282d32d553b9286ca42de"
+  },
+  {
+    "name": "codex-test-failure-retry",
+    "raw_sha256": "fea075115c4aa8637edd7d7f84d90e3b102b63f494a4489720a91fe58f6174c3",
+    "projected_sha256": "c1b0bb22c58f3d996555fb15904ecfcef99cc920008aab844004a10e71ba0202"
+  },
+  {
+    "name": "codex-controlled-cases",
+    "raw_sha256": "9651728c9c21b225d117cf704a2c5a3b9da6935fe9433c96a57ee8706a0f41c5",
+    "projected_sha256": "03a5090292ed57709597c13a1ae8701eb6aa61a560e33d428e6b2fa6bc87b4aa"
+  }
+]
