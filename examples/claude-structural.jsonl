@@ -1,0 +1,349 @@
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"queue-operation"}
+{"type":"system"}
+{"type":"system"}
+{"type":"queue-operation"}
+{"message":{"content":[{"type":"text"}],"role":"user"},"type":"user"}
+{"type":"file-history-snapshot"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-1","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-1","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-2","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-2","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-3","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-3","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-4","input":{},"name":"Read","type":"tool_use"},{"id":"id-5","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-5","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-4","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"thinking"},{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"system"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-6","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-7","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-6","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-7","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-8","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-8","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-9","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-10","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":true,"tool_use_id":"id-9","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":true,"tool_use_id":"id-10","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-11","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-12","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-11","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-12","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-13","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-13","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-14","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":true,"tool_use_id":"id-14","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-15","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-15","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-16","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-16","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-17","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-18","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-17","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-18","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-19","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-20","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-19","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-20","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-21","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-21","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-22","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-22","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-23","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-23","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-24","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-24","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-25","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-25","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-26","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-26","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-27","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-27","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-28","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-28","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-29","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-30","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-29","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-30","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-31","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-32","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-31","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-32","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-33","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-34","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-33","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-34","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-35","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-35","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-36","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-36","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-37","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-38","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-37","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-38","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-39","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-39","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-40","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-40","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-41","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-41","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-42","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-43","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-42","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-43","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-44","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-45","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-44","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-45","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-46","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-46","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-47","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-47","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-48","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-48","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-49","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-49","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-50","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-50","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-51","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-51","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-52","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-52","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-53","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-53","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-54","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-54","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-55","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-55","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-56","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-57","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-56","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-57","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-58","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-58","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"user"},"type":"user"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-59","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-59","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-60","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-60","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-61","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-61","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-62","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-63","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-62","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-63","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-64","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-65","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-64","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-65","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"user"},"type":"user"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"system"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"id":"id-66","input":{},"name":"private-tool-1","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-66","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"},{"type":"text"},{"id":"id-67","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-67","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"id":"id-68","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-68","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-69","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-69","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"system"}
+{"type":"file-history-snapshot"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-70","input":{},"name":"private-tool-1","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-70","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-71","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-71","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-72","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-72","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-73","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-73","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-74","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-74","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"id":"id-75","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-75","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-76","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-76","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-77","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-77","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-78","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-78","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"id":"id-79","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-79","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-80","input":{},"name":"Grep","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-80","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-81","input":{},"name":"Edit","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"type":"file-history-snapshot"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-81","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-82","input":{},"name":"Edit","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-82","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-83","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-83","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-84","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":true,"tool_use_id":"id-84","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":"[content omitted]","role":"user"},"type":"user"}
+{"type":"file-history-snapshot"}
+{"message":{"content":[{"id":"id-85","input":{},"name":"Read","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-85","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-86","input":{},"name":"Edit","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"type":"file-history-snapshot"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-86","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-87","input":{},"name":"Edit","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","tool_use_id":"id-87","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-88","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-88","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-89","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":true,"tool_use_id":"id-89","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"type":"system"}
+{"type":"system"}
+{"message":{"content":[{"type":"thinking"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"id":"id-90","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-90","type":"tool_result"}],"role":"user"},"type":"user"}
+{"message":{"content":[{"id":"id-91","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-91","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"},{"id":"id-92","input":{},"name":"Bash","type":"tool_use"}],"role":"assistant"},"type":"assistant"}
+{"message":{"content":[{"content":"[content omitted]","is_error":false,"tool_use_id":"id-92","type":"tool_result"}],"role":"user"},"type":"user"}
+{"type":"system"}
+{"message":{"content":[{"type":"text"}],"role":"assistant"},"type":"assistant"}
+{"type":"system"}
+{"type":"system"}
