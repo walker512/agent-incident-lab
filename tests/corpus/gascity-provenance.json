@@ -1,0 +1,33 @@
+{
+  "id": "gascity-edit-fragment",
+  "classification": "public-real-run",
+  "scope": "upstream-described captured and sanitized three-frame fragment; not a full run or a fault incident",
+  "producer_version": "unknown",
+  "model_field": "claude-opus-4-8; not a CLI version",
+  "source_url": "https://raw.githubusercontent.com/gastownhall/gascity/9a4b1e7181a659c6ac17400ba130e6eb27df777c/internal/worker/workertest/testdata/corpus/claude/edit-opus-4-8.jsonl",
+  "capture_evidence_url": "https://github.com/gastownhall/gascity/blob/9a4b1e7181a659c6ac17400ba130e6eb27df777c/internal/worker/workertest/testdata/corpus/README.md",
+  "source_sha256": "fe4b52ae28e782cf0f55413ed8ee28f3816e9d5ee034a328d782ff3eee1e679d",
+  "artifact_sha256": "c85c1dfbb80a006977fa97debeba6582965c715427100c799cf7682fb80a6d1a",
+  "license": "MIT",
+  "license_notice": "tests/corpus/LICENSE-gascity.txt",
+  "transformation": "core.project 0.1.1 removes original content and IDs; unsupported top-level tool_result becomes __unknown__; source semantic pair is lost",
+  "raw_annotation": {
+    "call_line": 2,
+    "result_line": 3,
+    "call_id_sha256": "e0b6f676f0b8e0b6bb13ba012e5795eadb675f8730fb573af3596811319047fb",
+    "observation": "matching Edit result, no is_error flag, success prose; no task-level verdict"
+  },
+  "expected_parser": {
+    "recognized": 2,
+    "unknown_lines": [
+      3
+    ],
+    "calls": 1,
+    "results": 0,
+    "pending": 1,
+    "failures": 0,
+    "gate": false
+  },
+  "privacy_review": "Compared projection bytes against independently downloaded source; only three stripped records shipped, no source prose, paths, IDs or diff.",
+  "review_date": "2026-11-16"
+}

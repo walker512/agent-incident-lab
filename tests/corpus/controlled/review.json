@@ -1,0 +1,81 @@
+{
+  "classification": "controlled-real-run",
+  "capture_date": "2026-11-16",
+  "producer_version": "0.151.0",
+  "producer_version_evidence": "capture operator report; original binary not available in this review environment",
+  "os": "Windows",
+  "python_version": "3.11.9",
+  "model": "gpt-5.6-sol (reported diagnostics; CLI default selection)",
+  "independent_sessions": 3,
+  "sessions_with_command_execution": 2,
+  "natural_incidents": 0,
+  "license": "MIT incorporation authorized by owner in supplied README",
+  "source_archive_sha256": "e20edab189ccb6e86e1b3ff311695b125d8481ad9a9995ac5dd499626e0f9022",
+  "raw_verification": "unavailable by design: raw stdout/stderr retained by capture operator; hashes are unverified declarations",
+  "privacy_review": "All projected bytes reviewed: only event types, normalized IDs/status/exit codes. Raw streams, command text, paths, original IDs and account metadata excluded.",
+  "transformation": "operator projector strips content and aliases IDs; nonzero exits normalized to 1; record order preserved; not a raw transcript",
+  "cases": [
+    {
+      "id": "codex-test-failure",
+      "records": 5,
+      "commands": 0,
+      "failures": 0,
+      "findings": [
+        "no_tool_activity"
+      ],
+      "pairs": [],
+      "semantic_label": "attempt blocked according to model prose; no structured permission error evidence"
+    },
+    {
+      "id": "codex-test-failure-retry",
+      "records": 7,
+      "commands": 1,
+      "failures": 1,
+      "findings": [
+        "tool_failed"
+      ],
+      "pairs": [
+        [
+          4,
+          5,
+          "failed"
+        ]
+      ],
+      "semantic_label": "operator observed intentional unittest assertion failure"
+    },
+    {
+      "id": "codex-controlled-cases",
+      "records": 13,
+      "commands": 4,
+      "failures": 3,
+      "findings": [
+        "tool_failed",
+        "tool_failed",
+        "tool_failed"
+      ],
+      "pairs": [
+        [
+          4,
+          5,
+          "failed"
+        ],
+        [
+          6,
+          7,
+          "failed"
+        ],
+        [
+          8,
+          9,
+          "failed"
+        ],
+        [
+          10,
+          11,
+          "success"
+        ]
+      ],
+      "semantic_label": "operator observed missing file, invalid JSON, fixture subprocess timeout, success; one session"
+    }
+  ]
+}

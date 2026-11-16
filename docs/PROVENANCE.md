@@ -23,3 +23,12 @@ The Codex files used in the comparison are native-format **test fixtures**, not 
 - [Codex exec fixture](https://github.com/entireio/cli/blob/76f1b5129b974afdf8e59e4ae3755083c10ff8ff/cmd/entire/cli/agent/codex/testdata/json_session.jsonl), SHA-256 `c3bdf5bfb876820920a7bf3eb0ead9020becbc95fc85a656a43f89bdc33b3d90`, 6 records.
 
 Neither is shipped as a raw file. Private verification data and test scripts are outside the release tree. No private user sessions were read or copied.
+
+## Repeatable public-source audit
+
+[Regression evidence](REGRESSION.md) and `tests/corpus/manifest.json` now record
+reviewed error pairs, source versions and fixed expected outcomes. The two Codex
+fixtures have content-stripped projections in `tests/corpus/`; they remain
+**upstream-fixture**, not real-run captures. Run `python scripts/audit_public_sources.py`
+for the optional independent raw-source checks. The Claude file is one
+upstream-described public real run, regardless of its five error results.

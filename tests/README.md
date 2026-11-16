@@ -1,4 +1,4 @@
-# Public synthetic regression tests
+# Public regression tests
 
 Run from the repository root with Python 3.10+:
 
@@ -6,8 +6,11 @@ Run from the repository root with Python 3.10+:
 python -m unittest discover -s tests -v
 ```
 
-Only Python's standard library is required. Every input is invented in the test
-code. No session-directory discovery, private transcript, account, model call,
+Only Python's standard library is required. `test_core.py` inputs are invented in the test
+code. `test_corpus.py` additionally checks reviewed structural derivatives of
+pinned public sources; see [source-backed evidence](../docs/REGRESSION.md). Controlled Codex projections are checked separately in `test_controlled_corpus.py`,
+which also runs the supplied benign fixture programs in a temporary directory.
+No session-directory discovery, private transcript, account, model call,
 network request, or agent execution is used. Synthetic canaries test selected
 export boundaries; they are not credentials.
 

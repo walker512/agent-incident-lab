@@ -1,0 +1,2 @@
+# Preserve exact corpus bytes for provenance SHA-256 checks on every OS.
+*.jsonl -text
