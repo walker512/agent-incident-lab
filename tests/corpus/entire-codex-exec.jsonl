@@ -1,0 +1,6 @@
+{"type":"thread.started"}
+{"type":"turn.started"}
+{"item":{"id":"id-1","status":"in_progress","type":"command_execution"},"type":"item.started"}
+{"item":{"exit_code":0,"id":"id-1","status":"completed","type":"command_execution"},"type":"item.completed"}
+{"item":{"type":"agent_message"},"type":"item.completed"}
+{"type":"turn.completed"}

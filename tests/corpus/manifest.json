@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-16",
+  "cases": [
+    {
+      "id": "entire-claude-full2",
+      "classification": "public-real-run",
+      "independent_run_id": "entire-claude-full2",
+      "authenticity": "upstream maintainer describes a real session; not independently witnessed",
+      "producer_version": "2.1.85",
+      "producer_version_evidence": "source version field",
+      "source_url": "https://raw.githubusercontent.com/entireio/cli/76f1b5129b974afdf8e59e4ae3755083c10ff8ff/transcript/testdata/claude_full2.jsonl",
+      "source_sha256": "b06722789bf9131ede579896bd169731d7396c02749afbf7d725deb115794ebb",
+      "source_bytes": 1168216,
+      "license": "MIT",
+      "license_notice": "examples/LICENSE-entire.txt",
+      "artifact": "examples/claude-structural.jsonl",
+      "artifact_sha256": "1d876458cfcd237202c0636a09b60f146c99cf697f4c1a3665f8a406181f780d",
+      "transformation": "incidentlab.core.project 0.1.1; remove prose, arguments, outputs, timestamps, paths; alias IDs; preserve all record positions",
+      "privacy_review": "Only structural projections shipped. Source IDs recorded as SHA-256 for pair audit. No original prose or output published.",
+      "expected": {
+        "format": "claude",
+        "records": 349,
+        "calls": 92,
+        "results": 92,
+        "failures": 5,
+        "unknown_outcomes": 0,
+        "unknown_lines": [],
+        "gate": false
+      },
+      "annotations": [
+        {
+          "call_line": 18,
+          "result_line": 19,
+          "call_id_sha256": "0dd945ce0092a24f1521feb85094396fed7100b7946e9e7554c15f98a378ac32",
+          "status": "success",
+          "label": "negative-control"
+        },
+        {
+          "call_line": 42,
+          "result_line": 44,
+          "call_id_sha256": "97b9ea9cc41d1079f3656def219618d7a4acf3b2f49425106706423e4351774d",
+          "status": "failed",
+          "label": "runtime-version-unconfigured"
+        },
+        {
+          "call_line": 43,
+          "result_line": 45,
+          "call_id_sha256": "4ecf403cc275a1863e4c017ff783beb86faadc1f275b565b7afb6a25a268efa7",
+          "status": "failed",
+          "label": "sibling-cancelled"
+        },
+        {
+          "call_line": 52,
+          "result_line": 53,
+          "call_id_sha256": "5fbcdb456a3b0bed8e3c76fd9241e7dd269c3b1fea4217f76acc687f24bf65de",
+          "status": "failed",
+          "label": "git-object-path-absent"
+        },
+        {
+          "call_line": 312,
+          "result_line": 313,
+          "call_id_sha256": "adf32d0c1687d0a728834721e9a7ce68332ac09ec4320948d289b902a86c2251",
+          "status": "failed",
+          "label": "test-command-nonzero"
+        },
+        {
+          "call_line": 333,
+          "result_line": 334,
+          "call_id_sha256": "7931f496440d3f4694f5fac002a0005ce241dc3efd1c0e94950661077dd0f9d0",
+          "status": "failed",
+          "label": "test-suite-nonzero"
+        }
+      ]
+    },
+    {
+      "id": "entire-codex-rollout",
+      "classification": "upstream-fixture",
+      "independent_run_id": null,
+      "authenticity": "fixture only; execution unverified",
+      "producer_version": "0.118.0",
+      "producer_version_evidence": "fixture session_meta.payload.cli_version, not verified installation",
+      "source_url": "https://raw.githubusercontent.com/entireio/cli/76f1b5129b974afdf8e59e4ae3755083c10ff8ff/transcript/testdata/codex_full.jsonl",
+      "source_sha256": "01657030737a74c8ca3867a93cefa2125b5b7852905ad8dfbbdad57e8ad06dd3",
+      "source_bytes": 5219,
+      "license": "MIT",
+      "license_notice": "examples/LICENSE-entire.txt",
+      "artifact": "tests/corpus/entire-codex-rollout.jsonl",
+      "artifact_sha256": "6a409807054fa1cd261ecf5cc5ae9c3423977fae520ce4ffcf29a5eb76206ae0",
+      "transformation": "incidentlab.core.project 0.1.1; remove prose, arguments, outputs, timestamps, paths; alias IDs; preserve all record positions",
+      "privacy_review": "Only structural projections shipped. Source IDs recorded as SHA-256 for pair audit. No original prose or output published.",
+      "expected": {
+        "format": "codex-session",
+        "records": 27,
+        "calls": 2,
+        "results": 2,
+        "failures": 0,
+        "unknown_outcomes": 2,
+        "unknown_lines": [
+          27
+        ],
+        "gate": false
+      },
+      "annotations": [
+        {
+          "call_line": 12,
+          "result_line": 14,
+          "call_id_sha256": "3d62e741fff284a85680946d79e7eb46d77c57d62ed12a76052ec09014fabfe1",
+          "status": "unknown",
+          "label": "opaque-output"
+        },
+        {
+          "call_line": 19,
+          "result_line": 21,
+          "call_id_sha256": "40cc83046eb4c58675a15e92296dd6078ac7ead2c47d677a303691d26bb7a3be",
+          "status": "unknown",
+          "label": "opaque-output"
+        }
+      ]
+    },
+    {
+      "id": "entire-codex-exec",
+      "classification": "upstream-fixture",
+      "independent_run_id": null,
+      "authenticity": "fixture only; execution unverified",
+      "producer_version": "unknown",
+      "producer_version_evidence": "absent",
+      "source_url": "https://raw.githubusercontent.com/entireio/cli/76f1b5129b974afdf8e59e4ae3755083c10ff8ff/cmd/entire/cli/agent/codex/testdata/json_session.jsonl",
+      "source_sha256": "c3bdf5bfb876820920a7bf3eb0ead9020becbc95fc85a656a43f89bdc33b3d90",
+      "source_bytes": 984,
+      "license": "MIT",
+      "license_notice": "examples/LICENSE-entire.txt",
+      "artifact": "tests/corpus/entire-codex-exec.jsonl",
+      "artifact_sha256": "0fd0e116a4083271fb06d5a6771af2c071513291098a1318f4fdf0e431766c50",
+      "transformation": "incidentlab.core.project 0.1.1; remove prose, arguments, outputs, timestamps, paths; alias IDs; preserve all record positions",
+      "privacy_review": "Only structural projections shipped. Source IDs recorded as SHA-256 for pair audit. No original prose or output published.",
+      "expected": {
+        "format": "codex-exec",
+        "records": 6,
+        "calls": 1,
+        "results": 1,
+        "failures": 0,
+        "unknown_outcomes": 0,
+        "unknown_lines": [],
+        "gate": true
+      },
+      "annotations": [
+        {
+          "call_line": 3,
+          "result_line": 4,
+          "call_id_sha256": "2f58b7d7725eac66c32ab446bb53a188688dc1d76fcc40cf31f5cf6509181ce8",
+          "status": "success",
+          "label": "negative-control"
+        }
+      ]
+    }
+  ]
+}
