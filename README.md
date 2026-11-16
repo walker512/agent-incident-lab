@@ -17,9 +17,9 @@ python -m incidentlab serve
 Open **http://127.0.0.1:8765**. Windows users can also double-click `start.cmd`.
 
 1. Click **Try the sample →**. It is a structural projection of a publicly licensed, upstream-described real Claude Code session, not fabricated agent activity.
-2. See **349 records → 92 tools → 5 explicit failures**, each linked to source lines. Complete parser coverage does not make a failed run healthy.
-3. Open a failure's evidence, then create a bundle focused on `tool_failed`: **10 records retain the 5 failure pairs**. No prompts, commands, file contents, paths, original IDs, or outputs are copied.
-4. Preview and download the bundle. Verify it in the UI or CLI. Verification re-runs the parser and compares its structural diagnostic signature. It does not run the agent.
+2. See **349 records → 92 tools → 5 explicit failures**, each linked to source lines. Complete parser coverage does not erase explicit tool failures or establish task success.
+3. Click **Open incident evidence →** on a failure. Inspect its paired call/result and source-line dispositions, then **Prepare evidence slice →**: **10 records retain all 5 failure pairs** (the selected finding category, not just one occurrence). No prompts, commands, file contents, paths, original IDs, or outputs are copied.
+4. Click **Verify this preview locally**. The check cards separate consistency checks from unverified source authenticity and privacy. Review the bundle, then download it. A recipient can verify the saved artifact in the UI or CLI. Verification re-runs the parser and compares its structural diagnostic signature. It does not run the agent.
 
 No account. No API key. No telemetry. No remote assets. Only files you explicitly select are read. The web app talks to a loopback Python server on your own computer; imported content is processed in memory and is not written by the server.
 
@@ -28,6 +28,8 @@ No account. No API key. No telemetry. No remote assets. Only files you explicitl
 ```
 
 Need your own input? See [installation, transcript location, and capture guidance](docs/IMPORTING.md). For a useful upstream issue, see [the maintainer handoff and reproducibility loop](docs/TRIAGE.md).
+
+For a timed, honest presentation, see [the hackathon demonstration guide](docs/DEMO.md).
 
 ## What makes this different
 
@@ -92,7 +94,7 @@ Project code is MIT. The demo is derived from an MIT-licensed Entire fixture wit
 
 ## Project status
 
-Early, deliberately narrow release candidate. Live Codex producer verification and multi-version real-session coverage remain important gaps. A small, owner-authorized synthetic regression suite and CI configuration are now included; hosted CI results still need verification. A limited independent synthetic privacy/HTTP check and local regression run have been completed; comprehensive security review and cross-platform UI acceptance are still gaps. No package registry release, hosted service, star-count prediction, or claim of universal agent-format compatibility. Public API/schema are versioned but may change before 1.0.
+Early, deliberately narrow release candidate. Live Codex producer verification and multi-version real-session coverage remain important gaps. A small, owner-authorized synthetic regression suite and CI configuration are now included; the [historical 9-job OS/Python run](https://github.com/walker512/agent-incident-lab/actions/runs/43877347385) passed for commit `ecbce4bd23607ab9bf7b02d5ecd41d7900fa6a04`. That result does not validate this revision or every UI workflow or producer version. A limited independent synthetic privacy/HTTP check and local regression run have been completed; comprehensive security review and cross-platform UI acceptance are still gaps. No package registry release, hosted service, star-count prediction, or claim of universal agent-format compatibility. Public API/schema are versioned but may change before 1.0.
 
 Useful contributions: a permitted small native-format reproducer, exact producer version, expected coverage, and a failing structural case. Never attach secrets or private raw sessions. Prefer the bundle workflow above.
 
@@ -126,5 +128,5 @@ Run `python -m unittest discover -v` from this directory. Tests use synthetic
 records and cover correlation, parser unknowns, malformed input, allowlist
 projection, slices and verification boundaries. They contain no private raw
 sessions. `.github/workflows/tests.yml` defines a cross-platform CI matrix;
-configuration is not evidence of successful CI runs. This small suite is not
+check the Actions run for the exact revision you use; a configuration alone is not evidence of a passing run. This small suite is not
 cross-version producer validation or a comprehensive security audit.
