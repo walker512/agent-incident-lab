@@ -19,3 +19,7 @@ Report JSON contains a SHA-256 of the original input for local identity checks. 
 Server request size: 16 MiB, per-record JSONL size: 2 MiB, 100,000 physical lines. The server admits up to four concurrent connections with 15-second socket timeouts; this is a resource bound, not a claim of denial-of-service resistance. The UI file picker uses a 10 MiB limit to leave room for JSON escaping. This is a local utility, not a hardened multi-user upload service. Duplicate JSON keys and non-finite numbers are rejected. Excessive JSON nesting is handled as invalid input.
 
 If you discover a vulnerability, do not publish private raw transcripts in an issue. Describe it with a synthetic or allowlist-projected case. There is no external security inbox configured in this unreleased source tree.
+
+## Imported verification cases
+
+The verifier checks local consistency, not whether the supplied transcript went through the allowlist exporter. An imported case can contain raw content. `bundleChecksPassed` is not a privacy verdict or authenticity proof. Source-line mapping is checked for shape only; version differences are flagged, and the exporter’s projection claim is checked for internal consistency, not authenticated against an absent original source. The legacy `verified` field remains structural signature match only.

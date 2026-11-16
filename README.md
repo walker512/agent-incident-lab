@@ -67,7 +67,7 @@ python -m incidentlab verify failures.json
 python -m incidentlab compare before.jsonl after.jsonl --out comparison.json
 ```
 
-Use `--format codex-exec`, `--format codex-session`, or `--format claude` to diagnose a parser-selection problem. Auto mode refuses mixed known native families. CLI exit codes: `0` command completed (or gate/verification passed); `1` invalid input/I/O; `2` gate or signature verification failed. Without `--gate`, an inspect command returning a report can exit 0 even if the report contains failures.
+Use `--format codex-exec`, `--format codex-session`, or `--format claude` to diagnose a parser-selection problem. Auto mode refuses mixed known native families. CLI exit codes: `0` command completed (or gate/verification passed); `1` invalid input/I/O; `2` gate or bundle consistency checks failed. Without `--gate`, an inspect command returning a report can exit 0 even if the report contains failures.
 
 ## Input support and honest limits
 
@@ -78,7 +78,7 @@ Use `--format codex-exec`, `--format codex-session`, or `--format claude` to dia
 | Codex native `session_meta` / `response_item` / `event_msg` rollout | Function/custom-tool calls and outputs; opaque output strings remain **unknown outcome** |
 | Cursor, OTLP, Codex TUI event capture, arbitrary JSON | Unsupported unless it actually conforms to a supported schema; no auto-conversion claim |
 
-“Recognized” measures record/content-discriminator coverage, **not validation of every metadata field**. Unknown optional keys are ignored and omitted on export. Known metadata and narrative records do not produce tool activity. Native server-side tools and new content variants are deliberately unknown. Some partially understood rows may contribute lower-bound tool counts. A complete file can still have unknown tool outcomes. A source-derived demo proves one fixture, not every future CLI version.
+“Recognized” measures record/content-discriminator coverage, **not validation of every metadata field**. Unknown optional keys are ignored and omitted on export. Known metadata and narrative records do not produce tool activity. Native server-side tools and new content variants are deliberately unknown. Unknown content variants may contribute lower-bound tool counts from their supported blocks. Malformed Claude message rows are validated atomically: no calls, results or correlation changes from that row are committed. A complete file can still have unknown tool outcomes. A source-derived demo proves one fixture, not every future CLI version.
 
 An evidence slice is the union of finding source lines and their linked call/result rows. It is not a mathematically minimal reproducer and loses unrelated session context. A diagnostic signature compares format, coverage, counts, gate and finding-code multiplicities, not original text, command semantics, exact timing, or the original execution's cause. `projectionVerified: false` means the export did not preserve that signature; do not submit it as equivalent evidence.
 
@@ -92,6 +92,39 @@ Project code is MIT. The demo is derived from an MIT-licensed Entire fixture wit
 
 ## Project status
 
-Early, deliberately narrow release candidate. Live Codex producer verification, multi-version real-session coverage, and an authorized public regression suite remain important gaps. Independent security/UX review is still required before release. No package registry release, hosted service, star-count prediction, or claim of universal agent-format compatibility. Public API/schema are versioned but may change before 1.0.
+Early, deliberately narrow release candidate. Live Codex producer verification and multi-version real-session coverage remain important gaps. A small, owner-authorized synthetic regression suite and CI configuration are now included; hosted CI results still need verification. A limited independent synthetic privacy/HTTP check and local regression run have been completed; comprehensive security review and cross-platform UI acceptance are still gaps. No package registry release, hosted service, star-count prediction, or claim of universal agent-format compatibility. Public API/schema are versioned but may change before 1.0.
 
 Useful contributions: a permitted small native-format reproducer, exact producer version, expected coverage, and a failing structural case. Never attach secrets or private raw sessions. Prefer the bundle workflow above.
+
+## Verification boundaries (0.1.1)
+
+`verify` now reports separate `checks` for projected transcript hash, structural
+signature, parser version, export-time projection declaration consistency, and
+source-line map shape. `bundleChecksPassed` is true only when these local checks
+pass, the producer parser version matches, and the saved projection declaration
+is true. A different parser version requires review even if its aggregate output
+matches. The legacy `verified` field remains **signature match only** for API
+compatibility; do not use it as an overall pass. CLI exit 2 uses
+`bundleChecksPassed`.
+
+A map shape check requires one increasing positive line number per projected
+record. It cannot prove those were the original line numbers. The saved original
+summary and projection declaration are claims supplied by the exporter, not an
+independently authenticated source. Hashes detect accidental changes against the
+saved value, not forgery: an editor can replace data and recompute them. Neither
+success nor the presence of a hash proves who created a bundle, the original
+execution, root cause, or that it is safe to share. **Imported bundle privacy is
+not verified**; an externally constructed bundle can still contain raw content.
+
+The UI labels legacy report status `trusted` as **coverage-complete**. The API
+value is retained for compatibility and means only discriminator coverage, not
+full field/schema validation, accurate diagnosis, or successful execution.
+
+## Small public regression suite
+
+Run `python -m unittest discover -v` from this directory. Tests use synthetic
+records and cover correlation, parser unknowns, malformed input, allowlist
+projection, slices and verification boundaries. They contain no private raw
+sessions. `.github/workflows/tests.yml` defines a cross-platform CI matrix;
+configuration is not evidence of successful CI runs. This small suite is not
+cross-version producer validation or a comprehensive security audit.
