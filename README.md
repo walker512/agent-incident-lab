@@ -94,7 +94,11 @@ Project code is MIT. The demo is derived from an MIT-licensed Entire fixture wit
 
 ## Project status
 
-Early, deliberately narrow release candidate. Live Codex producer verification and multi-version real-session coverage remain important gaps. A small, owner-authorized synthetic regression suite and CI configuration are now included; the [historical 9-job OS/Python run](https://github.com/walker512/agent-incident-lab/actions/runs/43877347385) passed for commit `ecbce4bd23607ab9bf7b02d5ecd41d7900fa6a04`. That result does not validate this revision or every UI workflow or producer version. A limited independent synthetic privacy/HTTP check and local regression run have been completed; comprehensive security review and cross-platform UI acceptance are still gaps. No package registry release, hosted service, star-count prediction, or claim of universal agent-format compatibility. Public API/schema are versioned but may change before 1.0.
+Early, deliberately narrow release candidate. The [source-backed regression corpus](docs/REGRESSION.md) now includes reviewed
+projections from three controlled Codex 0.151.0 sessions (two with tool execution),
+one upstream-described full Claude run, a sanitized success fragment and two
+upstream fixtures. Raw controlled-run authenticity remains operator-attested;
+independent live producer verification and multi-version coverage remain gaps. A small, owner-authorized synthetic regression suite and CI configuration are now included; the [historical 9-job OS/Python run](https://github.com/walker512/agent-incident-lab/actions/runs/43877347385) passed for commit `ecbce4bd23607ab9bf7b02d5ecd41d7900fa6a04`. That result does not validate this revision or every UI workflow or producer version. A limited independent synthetic privacy/HTTP check and local regression run have been completed; comprehensive security review and cross-platform UI acceptance are still gaps. No package registry release, hosted service, star-count prediction, or claim of universal agent-format compatibility. Public API/schema are versioned but may change before 1.0.
 
 Useful contributions: a permitted small native-format reproducer, exact producer version, expected coverage, and a failing structural case. Never attach secrets or private raw sessions. Prefer the bundle workflow above.
 
@@ -124,8 +128,9 @@ full field/schema validation, accurate diagnosis, or successful execution.
 
 ## Small public regression suite
 
-Run `python -m unittest discover -v` from this directory. Tests use synthetic
-records and cover correlation, parser unknowns, malformed input, allowlist
+Run `python -m unittest discover -s tests -v` from this directory. Tests use synthetic
+records and reviewed public structural projections; see [source-backed regression
+evidence](docs/REGRESSION.md). They cover correlation, parser unknowns, malformed input, allowlist
 projection, slices and verification boundaries. They contain no private raw
 sessions. `.github/workflows/tests.yml` defines a cross-platform CI matrix;
 check the Actions run for the exact revision you use; a configuration alone is not evidence of a passing run. This small suite is not
