@@ -16,3 +16,13 @@ structural projection, focused slices, and verification checks. They do not
 establish compatibility with every producer version, prove complete privacy,
 reproduce an original agent failure, or measure diagnostic accuracy on real runs.
 The CI matrix exercises the tests, not full GUI or OS installer acceptance.
+
+Optional UI contract checks require Node.js (no packages):
+
+```sh
+node tests/test_web.cjs
+```
+
+These use a minimal synthetic DOM to check failure/coverage separation, evidence
+selection, verification check cards and stale-response handling. They do not
+replace real-browser layout, accessibility, file-download or import acceptance.
