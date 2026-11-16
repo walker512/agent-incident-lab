@@ -5,7 +5,7 @@ import json
 from collections import Counter
 from typing import Any
 
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 MAX_BYTES = 16 * 1024 * 1024
 MAX_LINES = 100_000
 MAX_LINE = 2 * 1024 * 1024
@@ -166,7 +166,10 @@ def analyze(text: str, format: str='auto') -> dict:
             content=msg.get('content')
             if isinstance(content,str): return True,None
             if not isinstance(content,list): raise ValueError('Missing message.content array or string.')
+            # Validate the whole record before mutating correlation state. A malformed
+            # later block must not leave a call, result, alias or duplicate finding.
             known=True
+            operations=[]
             for i,b in enumerate(content):
                 ptr=f'/message/content/{i}'
                 if not isinstance(b,dict): raise ValueError('Content block must be an object.')
@@ -174,15 +177,22 @@ def analyze(text: str, format: str='auto') -> dict:
                 if bt=='tool_use':
                     if typ!='assistant': raise ValueError('tool_use is only supported in assistant messages.')
                     if not isinstance(b.get('input'),dict): raise ValueError('tool_use requires an input object.')
-                    call(b.get('id'),b.get('name'),n,ptr)
+                    if not valid_id(b.get('id')) or not isinstance(b.get('name'),str) or not b['name']:
+                        raise ValueError('Tool call requires a string ID and name.')
+                    operations.append(('call',b['id'],b['name'],ptr))
                 elif bt=='tool_result':
                     if typ!='user': raise ValueError('tool_result is only supported in user messages.')
                     if not isinstance(b.get('content'),(str,list)): raise ValueError('tool_result requires string or array content.')
                     err=b.get('is_error',False)
                     if type(err) is not bool: raise ValueError('is_error must be boolean.')
-                    output(b.get('tool_use_id'),n,ptr,'failed' if err else 'success')
+                    if not valid_id(b.get('tool_use_id')):
+                        raise ValueError('Tool result requires a string correlation ID.')
+                    operations.append(('output',b['tool_use_id'],'failed' if err else 'success',ptr))
                 elif bt not in {'text','thinking','redacted_thinking','image','document','server_tool_use','web_search_tool_result','tool_reference'}: known=False
                 elif bt in {'server_tool_use','web_search_tool_result'}: known=False
+            for operation,key,value,ptr in operations:
+                if operation=='call': call(key,value,n,ptr)
+                else: output(key,n,ptr,value)
             return known,None if known else 'Unsupported content block; supported blocks on this line were inspected.'
         if typ=='result' and r.get('is_error') is True: finding('agent_error','Agent result reports an error.',[n],'error')
         return True,None
@@ -330,9 +340,44 @@ def bundle(text,format='auto',focus=None):
     return dict(bundleVersion=1,kind='structural-parser-case',scope=scope,focus=focus,sourceLines=source_lines,parserVersion=VERSION,format=format,transcript=projected,expected=signature(sanitized),projectionVerified=same,originalSummary=signature(original),privacy=dict(policy='closed-allowlist-v1',omitted=['prose','commands','arguments','outputs','paths','URLs','timestamps','original IDs','custom tool names','unknown keys'],retained=['event structure','tool categories','failure booleans','zero/nonzero exit class','record order'],warning='Structural parser case only. Not an executable agent reproduction. Workflow structure may still be confidential. Review before sharing.'),sha256=digest(projected))
 
 def verify_bundle(data):
-    if not isinstance(data,dict) or data.get('bundleVersion')!=1 or data.get('kind')!='structural-parser-case': raise InputError('Not a supported structural parser bundle.')
+    """Check a parser case, not its author or original source.
+
+    `verified` retains the v1 API meaning: structural signature match only.
+    New callers should inspect `checks` and `bundleChecksPassed`.
+    """
+    if not isinstance(data,dict) or type(data.get('bundleVersion')) is not int or data.get('bundleVersion')!=1 or data.get('kind')!='structural-parser-case':
+        raise InputError('Not a supported structural parser bundle.')
     transcript=data.get('transcript')
-    if not isinstance(transcript,str) or digest(transcript)!=data.get('sha256'): raise InputError('Bundle integrity check failed.')
+    if not isinstance(transcript,str) or digest(transcript)!=data.get('sha256'):
+        raise InputError('Projected transcript hash check failed. This hash does not authenticate the original source.')
     actual=analyze(transcript,data.get('format','auto'))
-    verified=signature(actual)==data.get('expected')
-    return dict(verified=verified,parserVersion=VERSION,bundleParserVersion=data.get('parserVersion'),actual=signature(actual),expected=data.get('expected'),note='Re-runs the local parser on sanitized structure. No agent or command was executed.')
+    actual_signature=signature(actual)
+    replay=actual_signature==data.get('expected')
+    version=data.get('parserVersion')
+    same_version=isinstance(version,str) and version==VERSION
+    declared=data.get('projectionVerified')
+    has_summary=isinstance(data.get('originalSummary'),dict) and isinstance(data.get('expected'),dict)
+    declaration_consistent=type(declared) is bool and has_summary and declared==(data['originalSummary']==data['expected'])
+    source_lines=data.get('sourceLines')
+    map_valid=(isinstance(source_lines,list) and len(source_lines)==len(records(transcript))
+               and all(type(n) is int and n>0 for n in source_lines)
+               and all(a<b for a,b in zip(source_lines,source_lines[1:])))
+    checks=dict(
+        transcriptHash='matched',
+        structuralSignature='matched' if replay else 'mismatch',
+        parserVersion='same' if same_version else 'different' if isinstance(version,str) and version else 'missing',
+        projectionDeclaration='consistent' if declaration_consistent else 'missing' if declared is None or not has_summary else 'inconsistent',
+        sourceLineMap='shape-valid' if map_valid else 'invalid',
+        sourceAuthenticity='not-verifiable',sourceLineAccuracy='not-verifiable',privacy='not-verified')
+    passed=replay and same_version and declaration_consistent and declared is True and map_valid
+    warnings=[]
+    if not same_version: warnings.append('Parser version differs or is missing. Matching results do not establish version compatibility.')
+    if not declaration_consistent: warnings.append('Export-time projection declaration is missing or contradicts the saved summaries.')
+    elif declared is not True: warnings.append('The exporter reported that projection did not preserve source diagnostics.')
+    if not map_valid: warnings.append('Source-line mapping must contain one increasing positive integer per projected record.')
+    warnings.append('Imported bundle privacy has not been verified. Successful consistency checks do not mean it is safe to share.')
+    warnings.append('Original source is absent: source identity, actual line numbers and export-time claims cannot be authenticated. A valid map shape does not prove correct source lines.')
+    return dict(verified=replay,bundleChecksPassed=passed,checks=checks,warnings=warnings,
+                projectionClaim=declared if type(declared) is bool else None,
+                parserVersion=VERSION,bundleParserVersion=version,actual=actual_signature,expected=data.get('expected'),
+                note='verified is a legacy structural-signature-only field. bundleChecksPassed covers listed local consistency checks, not source authenticity, original execution or root cause. No agent or command was executed.')

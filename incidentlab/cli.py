@@ -36,7 +36,7 @@ def main(argv=None):
             print(output,end='')
             sys.stdout.flush()
         if args.command=='inspect' and args.gate and not result['quality']['gate']: return 2
-        if args.command=='verify' and not result['verified']: return 2
+        if args.command=='verify' and not result['bundleChecksPassed']: return 2
         return 0
     except BrokenPipeError:
         # A downstream consumer (for example head) closed stdout intentionally.
